@@ -4,7 +4,7 @@ class StadiaController < ApplicationController
   # GET /stadia
   # GET /stadia.json
   def index
-    @stadia = Stadium.all
+    @stadia = Stadium.all.order_by("#{sort_column} #{sort_direction}").paginate(page: params[:page], per_page: 10)
   end
 
   # GET /stadia/1
@@ -70,5 +70,13 @@ class StadiaController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def stadium_params
       params.fetch(:stadium, {})
+    end
+
+    def sort_column
+      Stadium.fields.keys.include?(params[:sort]) ? params[:sort] : "name"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

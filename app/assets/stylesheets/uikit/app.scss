@@ -1,0 +1,103 @@
+// Including only the necessary modyles
+// UIKIT INCLUDES
+
+// Base
+@import "src/scss/mixins-theme";
+@import "src/scss/mixins";
+@import "variables-theme.scss";
+
+//
+// Core
+//
+
+// Components
+// Import components manually
+
+// Base
+@import "src/scss/components/variables.scss";
+@import "src/scss/components/mixin.scss";
+@import "src/scss/components/base.scss";
+
+// Elements
+@import "src/scss/components/link.scss";
+@import "src/scss/components/heading.scss";
+@import "src/scss/components/divider.scss";
+@import "src/scss/components/list.scss";
+@import "src/scss/components/description-list.scss";
+@import "src/scss/components/table.scss";
+@import "src/scss/components/icon.scss";
+@import "src/scss/components/form.scss"; // After: Icon
+@import "src/scss/components/button.scss";
+
+// Layout
+@import "src/scss/components/section.scss";
+@import "src/scss/components/container.scss";
+@import "src/scss/components/grid.scss";
+@import "src/scss/components/tile.scss";
+@import "src/scss/components/card.scss";
+
+// Common
+@import "src/scss/components/close.scss"; // After: Icon
+@import "src/scss/components/spinner.scss"; // After: Icon
+@import "src/scss/components/totop.scss"; // After: Icon
+@import "src/scss/components/alert.scss"; // After: Close
+@import "src/scss/components/badge.scss";
+@import "src/scss/components/label.scss";
+@import "src/scss/components/overlay.scss"; // After: Icon
+@import "src/scss/components/article.scss"; // After: Subnav
+@import "src/scss/components/comment.scss"; // After: Subnav
+@import "src/scss/components/search.scss"; // After: Icon
+
+// Navs
+@import "src/scss/components/nav.scss";
+@import "src/scss/components/navbar.scss"; // After: Card, Grid, Nav, Icon, Search
+@import "src/scss/components/subnav.scss";
+@import "src/scss/components/breadcrumb.scss";
+@import "src/scss/components/pagination.scss";
+@import "src/scss/components/tab.scss";
+@import "src/scss/components/slidenav.scss"; // After: Icon
+@import "src/scss/components/dotnav.scss";
+
+// JavaScript
+@import "src/scss/components/accordion.scss";
+@import "src/scss/components/drop.scss"; // After: Card
+@import "src/scss/components/dropdown.scss"; // After: Card
+@import "src/scss/components/modal.scss"; // After: Close
+@import "src/scss/components/sticky.scss";
+@import "src/scss/components/offcanvas.scss";
+@import "src/scss/components/switcher.scss";
+// Scrollspy
+// Toggle
+// Scroll
+
+// All optional components
+@import "src/scss/components/iconnav.scss";
+@import "src/scss/components/notification.scss";
+@import "src/scss/components/tooltip.scss";
+@import "src/scss/components/placeholder.scss";
+@import "src/scss/components/progress.scss";
+@import "src/scss/components/sortable.scss";
+
+// Utilities
+@import "src/scss/components/animation.scss";
+@import "src/scss/components/width.scss";
+@import "src/scss/components/text.scss";
+@import "src/scss/components/column.scss";
+@import "src/scss/components/cover.scss";
+@import "src/scss/components/background.scss";
+@import "src/scss/components/align.scss";
+@import "src/scss/components/utility.scss";
+@import "src/scss/components/flex.scss"; // After: Utility
+@import "src/scss/components/margin.scss";
+@import "src/scss/components/padding.scss";
+@import "src/scss/components/position.scss";
+@import "src/scss/components/transition.scss";
+@import "src/scss/components/visibility.scss";
+@import "src/scss/components/inverse.scss";
+
+// Need to be loaded last
+@import "src/scss/components/print.scss";
+
+// Theme
+@import "theme/_import";
+@import "src/scss/uikit-theme.scss"; // After: theme/_import

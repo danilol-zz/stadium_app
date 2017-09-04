@@ -3,12 +3,18 @@
   <head>
     <title>StadiumApp</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="berlin-background">
+      <div class="uk-container uk-flex uk-flex-center uk-flex-middle uk-height-viewport">
+        <div class="uk-width-1-1 uk-flex-middle" uk-grid>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

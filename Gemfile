@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'mongoid'
 gem "npm-pipeline-rails"
+gem 'will_paginate_mongoid'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

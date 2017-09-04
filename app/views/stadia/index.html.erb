@@ -1,32 +1,35 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Stadia</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Stadium</th>
-      <th>Country</th>
-      <th>Clubs</th>
-      <th>Capacity</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @stadia.each do |stadium| %>
+  <table class="uk-table uk-table-striped uk-table-hover uk-table-justify uk-table-divider">
+    <thead>
       <tr>
-        <td><%= stadium.name %></td>
-        <td><%= stadium.country %></td>
-        <td><%= stadium.clubs %></td>
-        <td><%= stadium.capacity[:total] %></td>
-        <td><%= link_to 'Show', stadium %></td>
-        <td><%= link_to 'Edit', edit_stadium_path(stadium) %></td>
-        <td><%= link_to 'Destroy', stadium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Stadium</th>
+        <th>Country</th>
+        <th>Clubs</th>
+        <th>Capacity</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @stadia.each do |stadium| %>
+        <tr>
+          <td><%= stadium.name %></td>
+          <td><%= stadium.country %></td>
+          <td><%= stadium.clubs %></td>
+          <td><%= stadium.capacity[:total] %></td>
+          <td><%= link_to 'Show', stadium %></td>
+          <td><%= link_to 'Edit', edit_stadium_path(stadium) %></td>
+          <td><%= link_to 'Destroy', stadium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <ul class="uk-pagination uk-flex-center">
+    <%= will_paginate @stadia, container: false %>
+  </ul>
 
 <br>
 

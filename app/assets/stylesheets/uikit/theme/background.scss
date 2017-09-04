@@ -1,0 +1,20 @@
+//
+// Component: Background
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+// Miscellaneous
+// ========================================================================
+
+// @mixin hook-background-misc(){}
+.berlin-background {
+  background-image: image-url('berlin.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 100% 100%;
+}
