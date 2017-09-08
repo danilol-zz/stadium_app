@@ -1,17 +1,109 @@
-<%= form_with(model: stadium, local: true) do |form| %>
+<%= form_with(model: stadium, local: true, class: "uk-form uk-form-stacked") do |f| %>
   <% if stadium.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(stadium.errors.count, "error") %> prohibited this stadium from being saved:</h2>
 
       <ul>
-      <% stadium.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% stadium.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
+  <fieldset class="uk-fieldset", data-uk-margin>
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:name, "Name", class: "uk-form-label") %>
+      <%= f.text_field :name, class: "" %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:other_names, "Other Names", class: "uk-form-label") %>
+      <%= f.text_field :other_names, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:capacity_total, "Capacity Total", class: "uk-form-label") %>
+      <%= f.text_field :capacity_total, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:capacity_additional, "Capacity Additional", class: "uk-form-label") %>
+      <%= f.text_field :capacity_additional, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:country, "Country", class: "uk-form-label") %>
+      <%= f.text_field :country, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:city, "City", class: "uk-form-label") %>
+      <%= f.text_field :city, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:clubs, "Clubs", class: "uk-form-label") %>
+      <%= f.text_field :clubs, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:inauguration, "Inauguration", class: "uk-form-label") %>
+      <%= f.text_field :inauguration, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:construction, "Construction", class: "uk-form-label") %>
+      <%= f.text_field :construction, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:cost, "Cost", class: "uk-form-label") %>
+      <%= f.text_field :cost, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:design, "Design", class: "uk-form-label") %>
+      <%= f.text_field :design, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:contractor, "Contractor", class: "uk-form-label") %>
+      <%= f.text_field :contractor, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:address, "Address", class: "uk-form-label") %>
+      <%= f.text_field :address, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:description, "Description", class: "uk-form-label") %>
+      <%= f.text_field :description, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:latitude, "Latitude", class: "uk-form-label") %>
+      <%= f.text_field :latitude, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:longitude, "Longitude", class: "uk-form-label") %>
+      <%= f.text_field :longitude, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:website, "Website", class: "uk-form-label") %>
+      <%= f.text_field :website, class: "" %>
+    </div>
+
+    <div class="uk-form uk-form-stacked">
+      <%= label_tag(:record_attendance, "Record Attendance", class: "uk-form-label") %>
+      <%= f.text_field :record_attendance, class: "" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </fieldset>
 <% end %>
+</div>

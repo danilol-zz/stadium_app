@@ -1,67 +1,110 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @stadium.name %>
-</p>
+<div>
+  <p>
+    <strong>Name:</strong>
+    <%= @stadium.name %>
+  </p>
 
-<p>
-  <strong>Other Names:</strong>
-  <%= @stadium.other_names %>
-</p>
-<p>
-  <strong>Capacity:</strong>
-  <%= @stadium.capacity %>
-</p>
+  <p>
+    <strong>Other Names:</strong>
+    <%= @stadium.other_names %>
+  </p>
+  <p>
+    <strong>Capacity Total:</strong>
+    <%= @stadium.capacity_total %>
+  </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @stadium.country %>
-</p>
+  <p>
+    <strong>Capacity Additional:</strong>
+    <%= @stadium.capacity_additional %>
+  </p>
 
-<p>
-  <strong>City</strong>
-  <%= @stadium.city %>
-</p>
+  <p>
+    <strong>Country:</strong>
+    <%= @stadium.country %>
+  </p>
 
-<p>
-  <strong>Clubs:</strong>
-  <%= @stadium.clubs %>
-</p>
+  <p>
+    <strong>City</strong>
+    <%= @stadium.city %>
+  </p>
 
-<p>
-  <strong>Inauguration:</strong>
-  <%= @stadium.inauguration %>
-</p>
+  <p>
+    <strong>Clubs:</strong>
+    <%= @stadium.clubs %>
+  </p>
 
-<p>
-  <strong>Construction:</strong>
-  <%= @stadium.construction %>
-</p>
+  <p>
+    <strong>Inauguration:</strong>
+    <%= @stadium.inauguration %>
+  </p>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @stadium.cost %>
-</p>
+  <p>
+    <strong>Construction:</strong>
+    <%= @stadium.construction %>
+  </p>
 
-<p>
-  <strong>Design:</strong>
-  <%= @stadium.design %>
-</p>
+  <p>
+    <strong>Cost:</strong>
+    <%= @stadium.cost %>
+  </p>
 
-<p>
-  <strong>Contractor:</strong>
-  <%= @stadium.contractor %>
-</p>
+  <p>
+    <strong>Design:</strong>
+    <%= @stadium.design %>
+  </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @stadium.address %>
-</p>
+  <p>
+    <strong>Contractor:</strong>
+    <%= @stadium.contractor %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @stadium.description %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @stadium.address %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @stadium.description %>
+  </p>
+
+  <p>
+    <strong>Latitude:</strong>
+    <%= @stadium.latitude %>
+  </p>
+
+  <p>
+    <strong>Longitude:</strong>
+    <%= @stadium.longitude %>
+  </p>
+
+  <p>
+    <strong>Website:</strong>
+    <%= @stadium.website %>
+  </p>
+
+  <p>
+    <strong>Record attendance:</strong>
+    <%= @stadium.record_attendance %>
+  </p>
+
+  <p>
+    <strong>Images</strong>
+    <%= @stadium.images %>
+  </p>
+
+  <p>
+    <strong>Created at:</strong>
+    <%= @stadium.created_at %>
+  </p>
+
+  <p>
+    <strong>Updated at:</strong>
+    <%= @stadium.updated_at %>
+  </p>
+
 <%= link_to 'Edit', edit_stadium_path(@stadium) %> |
 <%= link_to 'Back', stadia_path %>
+</div>

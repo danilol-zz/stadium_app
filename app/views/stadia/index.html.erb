@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<%= form_tag stadia_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <h1>Stadia</h1>
   <table class="uk-table uk-table-striped uk-table-hover uk-table-justify uk-table-divider">
     <thead>
@@ -18,7 +25,7 @@
           <td><%= stadium.name %></td>
           <td><%= stadium.country %></td>
           <td><%= stadium.clubs %></td>
-          <td><%= stadium.capacity[:total] %></td>
+          <td><%= stadium.capacity_total %></td>
           <td><%= link_to 'Show', stadium %></td>
           <td><%= link_to 'Edit', edit_stadium_path(stadium) %></td>
           <td><%= link_to 'Destroy', stadium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,10 +34,10 @@
     </tbody>
   </table>
 
-  <ul class="uk-pagination uk-flex-center">
     <%= will_paginate @stadia, container: false %>
-  </ul>
 
 <br>
 
+<div>
 <%= link_to 'New Stadium', new_stadium_path %>
+</div>

@@ -1,6 +1,7 @@
-<h1>Editing Stadium</h1>
+<div>
+  <h1>Editing Stadium</h1>
+  <%= render 'form', stadium: @stadium %>
 
-<%= render 'form', stadium: @stadium %>
-
-<%= link_to 'Show', @stadium %> |
-<%= link_to 'Back', stadia_path %>
+  <%= link_to 'Show', @stadium %> |
+  <%= link_to 'Back', stadia_path %>
+</div>

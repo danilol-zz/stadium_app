@@ -4,7 +4,12 @@ class StadiaController < ApplicationController
   # GET /stadia
   # GET /stadia.json
   def index
+    #@stadia = Stadium.full_text_search(params[:search]).order_by("#{sort_column} #{sort_direction}").paginate(page: params[:page], per_page: 10)
+    if params[:search]
+    @stadia = Stadium.full_text_search(params[:search]).asc(:country, :name).paginate(page: params[:page], per_page: 10)
+    else
     @stadia = Stadium.all.order_by("#{sort_column} #{sort_direction}").paginate(page: params[:page], per_page: 10)
+    end
   end
 
   # GET /stadia/1
@@ -69,7 +74,10 @@ class StadiaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stadium_params
-      params.fetch(:stadium, {})
+      params.require(:stadium).permit(:name, :capacity_total, :capacity_additional, :country, :city, :clubs,
+                                      :other_names, :inauguration, :construction, :cost, :design, :contractor,
+                                      :address, :description, :latitude, :longitude, :website, :record_attendance,
+                                      :images)
     end
 
     def sort_column

@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'mongoid'
+gem 'mongoid_search'
 gem "npm-pipeline-rails"
 gem 'will_paginate_mongoid'
 gem 'jquery-rails'

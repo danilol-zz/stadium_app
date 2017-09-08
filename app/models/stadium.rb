@@ -1,19 +1,34 @@
 class Stadium
   include Mongoid::Document
+  include Mongoid::Search
+  include Mongoid::Timestamps
 
-  index({ name: 1 }, { unique: true })
+  #index({ name: 1 }, { unique: true })
+  index name: 1
+  index country: 1
+  index city: 1
 
-  field :name         , type: String
-  field :capacity     , type: Hash
-  field :country      , type: String
-  field :city         , type: String
-  field :clubs        , type: String
-  field :other_names  , type: String
-  field :inauguration , type: String
-  field :construction , type: String
-  field :cost         , type: String
-  field :design       , type: String
-  field :contractor   , type: String
-  field :address      , type: String
-  field :description  , type: String
+  #embeds_many :pictures
+
+  search_in :name, :other_names, :city, :country, :address
+
+  field :name,                 type: String
+  field :capacity_total,       type: String
+  field :capacity_additional,  type: String
+  field :country,              type: String
+  field :city,                 type: String
+  field :clubs,                type: String
+  field :other_names,          type: String
+  field :inauguration,         type: String
+  field :construction,         type: String
+  field :cost,                 type: String
+  field :design,               type: String
+  field :contractor,           type: String
+  field :address,              type: String
+  field :description,          type: String
+  field :latitude,             type: String
+  field :longitude,            type: String
+  field :website,              type: String
+  field :record_attendance,    type: String
+  field :images,               type: Hash
 end
