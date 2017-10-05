@@ -2,6 +2,12 @@ class Stadium
   include Mongoid::Document
   include Mongoid::Search
   include Mongoid::Timestamps
+  include Geocoder::Model::Mongoid
+
+  geocoded_by :address, :skip_index => true
+  after_validation :geocode
+  #reverse_geocoded_by :coordinates
+  #after_validation :reverse_geocode  # auto-fetch address
 
   #index({ name: 1 }, { unique: true })
   index name: 1
@@ -28,6 +34,7 @@ class Stadium
   field :description,          type: String
   field :latitude,             type: String
   field :longitude,            type: String
+  field :coordinates,          type: Array
   field :website,              type: String
   field :record_attendance,    type: String
   field :images,               type: Hash

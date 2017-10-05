@@ -1,0 +1,23 @@
+Create github project
+
+echo "# weather_app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:danilol/weather_app.git
+git push -u origin master
+
+rails new weather_app -T --database=mysql
+rvm --ruby-version use 2.4.1@weather_app --create
+git commit
+
+add httparty, rspec, vcr, webmock gems
+rails generate rspec:install
+add spec/support/vcr.rb
+uncomment spec/rails_helper.rb to load support files
+rake db:create
+set api key on secrets.yml
+
+cache api
+tests
+

@@ -36,6 +36,7 @@ gem 'mongoid_search'
 gem "npm-pipeline-rails"
 gem 'will_paginate_mongoid'
 gem 'jquery-rails'
+gem 'geocoder'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

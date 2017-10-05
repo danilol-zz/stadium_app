@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <% key= Rails.application.secrets.google_maps_key %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=#{key}" async defer></script>
   </head>
 
   <body>
